@@ -76,16 +76,6 @@ jobs:
           bash build.sh pack_debs
           bash build.sh pack
 
-      - name: Build for bananapi-r2pro
-        run: |
-          sed -ri 's/^#(board=bpi-r2pro)/\1/' build.conf #change board to r2pro
-          bash build.sh importconfig
-          bash build.sh build
-      - name: Pack for bananapi-r2pro
-        run: |
-          bash build.sh pack_debs
-          bash build.sh pack
-
       - name: Build for bananapi-r3 (mini)
         run: |
           sed -ri 's/^#(board=bpi-r3)/\1/' build.conf #change board to r3
